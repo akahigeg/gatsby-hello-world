@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "gatsby";
 import Header from "../components/header";
+import "semantic-ui-css/semantic.min.css";
+import { Button } from "semantic-ui-react";
 
 export default () => (
   <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
     <Header />
     <p>Such wow. Very React.</p>
     <h1>Hello Gatsby!</h1>
-    <Link to="/about">About</Link>
+    <Link to="/about"><Button>About</Button></Link>
     <h1>Richard Hamming on Luck</h1>
     <div>
       <p>
