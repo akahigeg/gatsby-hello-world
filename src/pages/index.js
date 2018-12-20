@@ -4,13 +4,14 @@ import Header from "../components/header";
 import Layout from "../components/layout";
 import "semantic-ui-css/semantic.min.css";
 import { Button } from "semantic-ui-react";
+import { graphql } from "gatsby";
 
-export default () => (
+export default ({ data }) => (
   <Layout>
     <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
       <Header />
       <p>Such wow. Very React.</p>
-      <h1>Hello Gatsby!</h1>
+      <h1>Hello Gatsby! {data.site.siteMetadata.title}</h1>
       <Link to="/about">
         <Button>About</Button>
       </Link>
@@ -39,3 +40,13 @@ export default () => (
     </div>
   </Layout>
 );
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
