@@ -3,11 +3,10 @@ import { Link } from "gatsby";
 import Header from "../components/header";
 
 export default () => (
-  <div style={{ color: `purple` }}>
+  <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
     <Header />
     <p>Such wow. Very React.</p>
     <h1>Hello Gatsby!</h1>
-    <p>What a world. nande?</p>
     <Link to="/about">About</Link>
     <h1>Richard Hamming on Luck</h1>
     <div>
